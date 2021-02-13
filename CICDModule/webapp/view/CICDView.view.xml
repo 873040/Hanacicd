@@ -1,0 +1,17 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="ns.CICDModule.controller.CICDView" displayBlock="true">
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="{i18n>title}" backgroundDesign="List">
+					<content>
+					    <List noDataText="Drop list items here" id="list0" items="{path:'/REPOSITORYSet',parameters:{select:'Status,DependDesc,DependID,ValidTo,ValidFrom,FeatureDesc,FeatureID'}}">
+					        <items>
+					            <StandardListItem type="Navigation" title="List Item 1{FeatureDesc}" description="Description text" icon="sap-icon://picture" id="item0"/>
+					        </items>
+					    </List>
+					</content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<edmx:Edmx
+    xmlns:sap="http://www.sap.com/Protocols/SAPData"
+    xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"
+    xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" Version="1.0">-
+    
+    
+    <edmx:DataServices m:DataServiceVersion="2.0">-
+        
+        
+        <Schema xml:lang="en"
+            xmlns="http://schemas.microsoft.com/ado/2008/09/edm" sap:schema-version="1" Namespace="ZFFW_SRV">-
+            
+            
+            <EntityType sap:content-version="1" Name="REPOSITORY">-
+                
+                
+                <Key>
+                    <PropertyRef Name="FeatureID"/>
+                </Key>
+                <Property Name="FeatureID" sap:filterable="false" sap:sortable="false" sap:unicode="false" Nullable="false" Type="Edm.String"/>
+                <Property Name="FeatureDesc" sap:filterable="false" sap:sortable="false" sap:unicode="false" Nullable="false" Type="Edm.String"/>
+                <Property Name="ValidFrom" sap:filterable="false" sap:sortable="false" sap:unicode="false" Type="Edm.DateTime" sap:label="Time Stamp" Precision="0"/>
+                <Property Name="ValidTo" sap:filterable="false" sap:sortable="false" sap:unicode="false" Type="Edm.DateTime" sap:label="Time Stamp" Precision="0"/>
+                <Property Name="DependID" sap:filterable="false" sap:sortable="false" sap:unicode="false" Type="Edm.String"/>
+                <Property Name="DependDesc" sap:filterable="false" sap:sortable="false" sap:unicode="false" Type="Edm.String"/>
+                <Property Name="Status" sap:filterable="false" sap:sortable="false" sap:unicode="false" Type="Edm.Boolean" sap:label="Indicator"/>
+            </EntityType>-
+            
+            
+            <EntityContainer Name="ZFFW_SRV_Entities" sap:supported-formats="atom json xlsx" m:IsDefaultEntityContainer="true">
+                <EntitySet sap:content-version="1" Name="REPOSITORYSet" sap:searchable="true" EntityType="ZFFW_SRV.REPOSITORY"/>
+            </EntityContainer>
+            <atom:link
+                xmlns:atom="http://www.w3.org/2005/Atom" href="http://azsaw0399.agl.int:8000/sap/opu/odata/sap/ZFFW_SRV/$metadata" rel="self"/>
+                <atom:link
+                    xmlns:atom="http://www.w3.org/2005/Atom" href="http://azsaw0399.agl.int:8000/sap/opu/odata/sap/ZFFW_SRV/$metadata" rel="latest-version"/>
+                </Schema>
+            </edmx:DataServices>
+        </edmx:Edmx>
